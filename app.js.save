@@ -1,0 +1,114 @@
+// ~/my-web-app/app.js
+const express = require('express');
+const app = express();
+const port = 3000; // Node.js app will run on port 3000
+
+app.get('/', (req, res) => {
+    // Using backticks (`) for a multiline string to send the HTML   </head>
+        <body class="antialiased">
+
+            <!-- Navbar -->
+            <nav class="bg-gray-800 p-4 sticky top-0 z-50 shadow-md">
+                <div class="container mx-auto flex justify-between items-center">
+                    <!-- Logo/Name -->
+                    <a href="#home" class="text-white text-2xl font-bold tracking-wide hover:text-purple-400 transition-colors duration-300">Ewelie Joseph Ebuka</a>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex space-x-8">
+                        <li><a href="#home" class="text-white hover:text-purple-400 transition-colors duration-300 text-lg font-medium">Home</a></li>
+                        <li><a href="#about" class="text-white hover:text-purple-400 transition-colors duration-300 text-lg font-medium">About</a></li>
+                        <li><a href="#skills" class="text-white hover:text-purple-400 transition-colors duration-300 text-lg font-medium">Skills</a></li>
+                        <li><a href="#experience" class="text-white hover:text-purple-400 transition-colors duration-300 text-lg font-medium">Experience</a></li>
+                        <li><a href="#projects" class="text-white hover:text-purple-400 transition-colors duration-300 text-lg font-medium">Projects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Menu (hidden by default) -->
+                <div id="mobile-menu" class="hidden md:hidden bg-gray-700 mt-4 rounded-md">
+                    <ul class="flex flex-col items-center py-2 space-y-2">
+                        <li><a href="#home" class="block py-2 px-4 text-white hover:bg-gray-600 rounded-md w-full text-center transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="block py-2 px-4 text-white hover:bg-gray-600 rounded-md w-full text-center transition-colors duration-300">About</a></li>
+                        <li><a href="#skills" class="block py-2 px-4 text-white hover:bg-gray-600 rounded-md w-full text-center transition-colors duration-300">Skills</a></li>
+                        <li><a href="#experience" class="block py-2 px-4 text-white hover:bg-gray-600 rounded-md w-full text-center transition-colors duration-300">Experience</a></li>
+                        <li><a href="#projects" class="block py-2 px-4 text-white hover:bg-gray-600 rounded-md w-full text-center transition-colors duration-300">Projects</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <header id="home" class="gradient-bg text-white py-20 px-4 sm:px-6 lg:px-8 rounded-b-xl shadow-lg">
+                <div class="container mx-auto flex flex-col items-center text-center">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 animate-fade-in-down animate-delay-100">
+                        Ewelie Joseph Ebuka
+                    </h1>
+                    <p class="text-xl sm:text-2xl lg:text-3xl font-light mb-6 animate-fade-in animate-delay-300">
+                        Cloud Engineer
+                    </p>
+                    <div class="bg-white text-gray-800 p-6 sm:p-8 rounded-lg shadow-custom max-w-3xl animate-scale-up animate-delay-500">
+                        <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-purple-700">
+                            Project: The Future of Tech in Real Estate
+                        </h2>
+                        <p class="text-lg sm:text-xl leading-relaxed">
+                            This project reimagines property management and development through cutting-edge cloud infrastructure.
+                            By leveraging scalable solutions and data analytics, it aims to create intelligent, secure,
+                            and highly efficient platforms that transform how real estate businesses operate and interact with their assets.
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Professional Bio Section -->
+            <section id="about" class="py-16 px-4 sm:px-6 lg:px-8">
+                <div class="container mx-auto bg-white p-8 rounded-lg s
+                                <li>
+                                    <p class="font-medium text-lg">Automated Cloud Cost Optimization Tool</p>
+                                    <p class="text-base italic">Developed a Python-based tool that uses AWS APIs to identify and optimize underutilized cloud resources, saving significant costs for clients.</p>
+                                </li>
+                                <li>
+                                    <p class="font-medium text-lg">Containerized Microservices Platform</p>
+                         
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-gray-800 text-white py-8 text-center rounded-t-xl mt-12">
+                <div class="container mx-auto">
+                    <p>&copy; 2025 Ewelie Joseph Ebuka. All rights reserved.</p>
+                </div>
+            </footer>
+
+            <script>
+                // JavaScript for mobile menu toggle
+                document.addEventListener('DOMContentLoaded', () => {
+                    const mobileMenuButton = document.getElementById('mobile-menu-button');
+                    const mobileMenu = document.getElementById('mobile-menu');
+
+                    mobileMenuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+
+                    // Close mobile menu when a link is clicked
+                    mobileMenu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenu.classList.add('hidden');
+                        });
+                    });
+                });
+            </script>
+
+        </body>
+        </html>
+    `);
+});
+
+app.listen(port, () => {
+    console.log(Node.js app listening on port ${port});
+});
