@@ -424,3 +424,9 @@ sudo certbot --nginx -d ebukaaws.xyz -d www.ebukaaws.xyz
 
 Public IP/Domain Access Verified: Successfully accessed the web application via both the EC2 Public IP (HTTP) and the custom domain (HTTPS).
 All Requirements Met: Server provisioned, Nginx reverse proxy configured, dynamic Node.js/Express landing page deployed, HTTP/HTTPS security implemented with Let's Encrypt, and all specified content included.
+
+
+![image](https://github.com/jaybube/AltsSchoolSS-Project/blob/7c876f8902a88b83aaf669971a9ad55207d00804/webapp/webapp1.jpg)
+![image](https://github.com/jaybube/AltsSchoolSS-Project/blob/7c876f8902a88b83aaf669971a9ad55207d00804/webapp/webapp2.jpg)
+![image](https://github.com/jaybube/AltsSchoolSS-Project/blob/7c876f8902a88b83aaf669971a9ad55207d00804/webapp/webapp3.jpg)
+
